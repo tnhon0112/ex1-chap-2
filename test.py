@@ -12,15 +12,15 @@ class SimpleMotor:
         self.steps = int(self.T / self.dt)
 
         # Motor limits
-        self.tau_max = 2.0  # Nm
+        self.tau_max = 3.0  # Nm
 
         # Arm parameters
-        self.J = 0.02  # inertia
-        self.b = 0.1   # damping
+        self.J = 0.08  # inertia
+        self.b = 0.05   # damping
 
         # Controller gains
-        self.kp = 8.0
-        self.kd = 1.5
+        self.kp = 15.0
+        self.kd = 1.8
 
         self.motor_command = motor_command
         self.time = np.linspace(0, self.T, self.steps)
